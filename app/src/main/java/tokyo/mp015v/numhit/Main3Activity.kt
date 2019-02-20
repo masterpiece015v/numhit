@@ -37,13 +37,13 @@ class Main3Activity : AppCompatActivity() {
 
         //数字を決定する
         btn_decision.setOnClickListener {
-            //同じ数字がないかチェック
-            if( num0.value == num1.value || num1.value == num2.value || num0.value == num2.value ){
-                Toast.makeText(applicationContext,"同じ数字は設定できません",Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
             when( sw ){
                 0->{
+                    //同じ数字がないかチェック
+                    if( num0.value == num1.value || num1.value == num2.value || num0.value == num2.value ){
+                        Toast.makeText(applicationContext,"同じ数字は設定できません",Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
                     //プレイヤー１
                     p1_num[0] = num0.value
                     p1_num[1] = num1.value
@@ -56,6 +56,11 @@ class Main3Activity : AppCompatActivity() {
                     num2.value = 0
                 }
                 1->{
+                    //同じ数字がないかチェック
+                    if( num0.value == num1.value || num1.value == num2.value || num0.value == num2.value ){
+                        Toast.makeText(applicationContext,"同じ数字は設定できません",Toast.LENGTH_SHORT).show()
+                        return@setOnClickListener
+                    }
                     //プレイヤー２
                     p2_num[0] = num0.value
                     p2_num[1] = num1.value
@@ -72,6 +77,7 @@ class Main3Activity : AppCompatActivity() {
                     val intent = Intent(this,Main4Activity::class.java)
                     intent.putExtra("p1_num",p1_num)
                     intent.putExtra("p2_num",p2_num)
+                    startActivity( intent )
                 }
             }
         }
