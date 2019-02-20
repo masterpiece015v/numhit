@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+    <TextView
+        android:id="@+id/txt_title2"
+        android:layout_width="316dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="プレイヤー１の数字３桁を決めてください。"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/num0"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2"></NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2"></NumberPicker>
+
+    <NumberPicker
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="73dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toEndOf="@+id/num0"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title2"></NumberPicker>
+
+    <Button
+        android:id="@+id/btn_decision"
+        android:layout_width="325dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="32dp"
+        android:text="プレイヤー１の数字決定"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num0" />
+
+</android.support.constraint.ConstraintLayout>
