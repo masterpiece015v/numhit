@@ -57,6 +57,7 @@ class Main4Activity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            //相手の数字を取得する
             val enemy = if( count % 2 == 1 ){ p2_num } else { p1_num }
 
             //EATの計算
@@ -75,29 +76,25 @@ class Main4Activity : AppCompatActivity() {
                 }
             }
 
-            //履歴の表示
-
-            var str_result : String? = if( count % 2 == 1 ){ str_result1 }else{ str_result2 }
-
-            if( count >= 2) {
-                if (str_result == null) {
-                    str_result = txt_result.text.toString()
-                } else {
-                    str_result = txt_result.text.toString() + "\n" + str_result
-                }
-
-                if( count % 2 == 1) {
-                    str_result1 = str_result
-                    txt_history1.text = str_result
-                }else{
-                    str_result2 = str_result
-                    txt_history2.text = str_result
-                }
-            }
-
             //結果の表示
             txt_result.text = "${count/2+1}回目 call:${selectNum[0]}${selectNum[1]}${selectNum[2]} eat:${eat},bit:${bit}"
-            
+
+            if( count % 2 == 1 ) {
+                if (txt_history1.text == null) {
+                    txt_history1.text = txt_result.text.toString()
+                } else {
+                    txt_history1.text = txt_result.text.toString() + "\n" + txt_history1.text
+                }
+                findViewById<TextView>(R.id.main4_txt_title).text = "プレイヤー２の番です。"
+            }else{
+                if (txt_history2.text == null) {
+                    txt_history2.text = txt_result.text.toString()
+                } else {
+                    txt_history2.text = txt_result.text.toString() + "\n" + txt_history2.text
+                }
+                findViewById<TextView>(R.id.main4_txt_title).text = "プレイヤー１の番です。"
+            }
+
             count++
         }
     }
