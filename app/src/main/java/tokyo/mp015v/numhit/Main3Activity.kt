@@ -1,5 +1,6 @@
 package tokyo.mp015v.numhit
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,7 +10,6 @@ import android.widget.Toast
 import java.lang.NumberFormatException
 
 class Main3Activity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +69,9 @@ class Main3Activity : AppCompatActivity() {
                 }
                 2->{
                     //ゲームスタート
-
+                    val intent = Intent(this,Main4Activity::class.java)
+                    intent.putExtra("p1_num",p1_num)
+                    intent.putExtra("p2_num",p2_num)
                 }
             }
         }

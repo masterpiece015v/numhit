@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main4Activity">
+
     <TextView
-        android:id="@+id/txt_main4title"
+        android:id="@+id/main4_txt_title"
         android:layout_width="333dp"
         android:layout_height="74dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="コンピュータが数字を決定しました。あなたも数字を決定してください。"
+        android:text="プレイヤー１は数字を選んでください。"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,7 +27,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_main4title" />
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
 
     <NumberPicker
         android:id="@+id/main4_num1"
@@ -35,7 +36,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/main4_num0"
-        app:layout_constraintTop_toBottomOf="@+id/txt_main4title" />
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
 
     <NumberPicker
         android:id="@+id/main4_num2"
@@ -47,10 +48,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/main4_num1"
-        app:layout_constraintTop_toBottomOf="@+id/txt_main4title" />
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
 
     <Button
-        android:id="@+id/btn_call"
+        android:id="@+id/main4_btn_call"
         android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -60,32 +61,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main4_num0" />
 
-    <ScrollView
-        android:layout_width="324dp"
-        android:layout_height="181dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_result">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txt_history"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </ScrollView>
-
     <TextView
-        android:id="@+id/txt_result"
+        android:id="@+id/main4_txt_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -93,5 +70,49 @@
         android:text="結果"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_call" />
+        app:layout_constraintTop_toBottomOf="@+id/main4_btn_call" />
+
+    <ScrollView
+        android:id="@+id/main4_scrollView1"
+        android:layout_width="158dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main4_txt_history1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/main4_scrollView2"
+        android:layout_width="158dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toEndOf="@+id/main4_scrollView1"
+        app:layout_constraintTop_toBottomOf="@+id/main4_btn_call">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main4_txt_history2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

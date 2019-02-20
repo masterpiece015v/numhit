@@ -17,10 +17,10 @@ class Main2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         //buttonの設定
-        val btn_call = findViewById(R.id.btn_call) as Button
+        val btn_call = findViewById(R.id.main4_btn_call) as Button
 
         //TextViewの設定
-        val txt_result = findViewById(R.id.txt_result) as TextView
+        val txt_result = findViewById(R.id.main4_txt_result) as TextView
         val txt_history = findViewById(R.id.txt_history) as TextView
 
         //spinnerの設定
