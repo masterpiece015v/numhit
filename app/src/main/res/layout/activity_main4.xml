@@ -19,7 +19,7 @@
 
     <NumberPicker
         android:id="@+id/main4_num0"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
@@ -28,20 +28,20 @@
 
     <NumberPicker
         android:id="@+id/main4_num1"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/main4_num0"
         app:layout_constraintTop_toBottomOf="@+id/main4_txt_title"></NumberPicker>
 
     <NumberPicker
         android:id="@+id/main4_num2"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/main4_num1"
         app:layout_constraintTop_toBottomOf="@+id/main4_txt_title"></NumberPicker>
@@ -52,12 +52,12 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="31dp"
         android:text="コール"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_num2" />
+        app:layout_constraintTop_toBottomOf="@+id/main4_num0" />
 
     <TextView
         android:id="@+id/main4_txt_result"
@@ -71,13 +71,16 @@
         app:layout_constraintTop_toBottomOf="@+id/main4_btn_call" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="152dp"
-        android:layout_height="158dp"
+        android:id="@+id/main4_scrollview1"
+        android:layout_width="151dp"
+        android:layout_height="143dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result">
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,15 +95,18 @@
     </ScrollView>
 
     <ScrollView
-        android:layout_width="151dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/main4_scrollview2"
+        android:layout_width="152dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/main4_scrollview1"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,5 +119,25 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="プレイヤー１"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="8dp"
+        android:text="プレイヤー２"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result" />
 
 </android.support.constraint.ConstraintLayout>

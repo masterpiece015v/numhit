@@ -13,8 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:layout_marginTop="36dp"
+        android:layout_marginEnd="141dp"
         android:text="NumHit"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,21 +106,29 @@
 
     <Button
         android:id="@+id/btn_start1"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_width="145dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="52dp"
+        android:layout_marginBottom="57dp"
         android:text="一人で遊ぶ"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/btn_start2"
-        android:layout_width="112dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
+        android:layout_width="145dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="58dp"
         android:text="二人で遊ぶ"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_start1"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 

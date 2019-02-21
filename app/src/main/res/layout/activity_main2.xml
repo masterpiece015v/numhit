@@ -7,11 +7,11 @@
     tools:context=".Main2Activity">
 
     <TextView
-        android:id="@+id/main4_txt_title"
+        android:id="@+id/main2_txt_title"
         android:layout_width="333dp"
-        android:layout_height="74dp"
+        android:layout_height="53dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="コンピュータが数字を決定しました。あなたも数字を決定してください。"
         android:textSize="18sp"
@@ -21,57 +21,70 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <NumberPicker
-        android:id="@+id/main4_num0"
+        android:id="@+id/main2_num0"
         android:layout_width="88dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
-
-    <NumberPicker
-        android:id="@+id/main4_num1"
-        android:layout_width="88dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="13dp"
-        app:layout_constraintStart_toEndOf="@+id/main4_num0"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
-
-    <NumberPicker
-        android:id="@+id/spn_num2"
-        android:layout_width="88dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/main4_num1"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_title" />
-
-    <Button
-        android:id="@+id/main4_btn_call"
-        android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main2_txt_title" />
+
+    <NumberPicker
+        android:id="@+id/main2_num1"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/main2_num0"
+        app:layout_constraintTop_toBottomOf="@+id/main2_txt_title" />
+
+    <NumberPicker
+        android:id="@+id/main2_num2"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main2_num1"
+        app:layout_constraintTop_toBottomOf="@+id/main2_txt_title" />
+
+    <Button
+        android:id="@+id/main2_btn_call"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="コール"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_num1" />
+        app:layout_constraintTop_toBottomOf="@+id/main2_num0" />
+
+    <TextView
+        android:id="@+id/main2_txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="結果"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main2_btn_call" />
 
     <ScrollView
         android:layout_width="324dp"
-        android:layout_height="181dp"
+        android:layout_height="151dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_txt_result">
+        app:layout_constraintTop_toBottomOf="@+id/main2_txt_result">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,22 +92,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txt_history"
+                android:id="@+id/main2_txt_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/main4_txt_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="結果"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main4_btn_call" />
 
 </android.support.constraint.ConstraintLayout>
